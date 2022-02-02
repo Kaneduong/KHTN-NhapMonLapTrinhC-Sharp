@@ -108,3 +108,63 @@ else ...
                 i++;
             }
             Console.WriteLine($"Ket qua la: {kq}");
+
+// BÀI 9: Tính T(n) = 1 x 2 x 3…x N
+            int a;
+            Console.Write("Tinh tich tu 1 den so: ");
+            a = int.Parse(Console.ReadLine());
+
+            int Tich = 1;
+            int i = 1;
+            while (i <= a)
+            {
+                Tich = Tich * i;
+                i++;
+            }
+            Console.WriteLine($"Ket qua la {ketqua}");
+            
+// BÀI 20: Liệt kê tất cả các “ước số” của số nguyên dương n
+            int n;
+            Console.Write("Nhap so n va tim uoc so cua n:");
+            n = int.Parse(Console.ReadLine());
+
+            int i = 1;
+
+            while (i <= n / 2)
+            {
+                if (n % i == 0)
+                {
+                    Console.WriteLine($"{i} la uoc so cua {n}");
+                }
+                i++;
+            }
+            Console.WriteLine($"{n} la uoc so cua {n}");
+
+//BÀI 109: Viết chương trình in bảng cửu chương ra màn hình
+// Cách 1: ====================
+            int n;
+            Console.WriteLine("Nhap bang cuu chuong can in: ");
+            n = int.Parse(Console.ReadLine());
+
+            int i = 1;
+
+            while (i <= 10)
+            {
+                int kq = i * n;
+                Console.WriteLine($"{n} x {i} = {kq}");                
+                i++;
+            }
+
+//Cách 2: ====================
+            int i = 2;
+            while (i <= 9)
+            {
+                int j = 1;
+                while (j <= 10)
+                {
+                    Console.WriteLine($"{i} x {j} =  {i * j}");
+                        j++;
+                }
+                i++;
+                Console.WriteLine("======================");
+            }
