@@ -1,0 +1,169 @@
+// Phép so sánh, lệnh rẻ nhánh (if), lặp 
+
+            int x, y, z;
+            Console.Write("Nhap so x: ");
+            x = int.Parse(Console.ReadLine());
+            Console.Write("Nhap so y: ");
+            y = int.Parse(Console.ReadLine());
+
+            if (x <= y)
+            {
+                z = x;
+            }
+            else
+            {
+                z = y;
+            }
+            Console.WriteLine(z);
+//========================================================================================            
+// TÌM SỐ LỚN NHẤT TRONG 2 SỐ NHẬP VÀO           
+            int x, y;
+            Console.Write("Nhap so x: ");
+            x = int.Parse(Console.ReadLine());
+            Console.Write("Nhap so y: ");
+            y = int.Parse(Console.ReadLine());
+            int max = x;
+            if (max < y)
+            {
+                max = y;
+            }
+            Console.WriteLine($"So lan nhat la: {max}");
+
+//========================================================================================
+// TÌM SỐ LỚN NHẤT TRONG 3 SỐ NHẬP VÀO
+            int x, y, z;
+            string s;
+            Console.Write("Nhap so x: ");
+            x = int.Parse(Console.ReadLine());
+            Console.Write("Nhap so y: ");
+            y = int.Parse(Console.ReadLine());
+            Console.Write("Nhap so z: ");
+            s = Console.ReadLine();
+            z = int.Parse(s);
+            int max = x;
+            if (max < y)
+            {
+                max = y;
+            }
+            if (max < z)
+            {
+                max = z;
+            }
+            Console.WriteLine($"So lan nhat la: {max}");
+            //Console.WriteLine("So lan nhat la: {0}", max); <== dùng cho các Visual studio version cũ
+
+//========================================================================================
+// GIẢI PHƯƠNG TRÌNH BẬC NHẤT:  Ax + B = 0
+            int A, B;
+            double x;
+
+            Console.WriteLine("Giai Phuong trinh Ax + B = 0");
+            Console.Write("Nhap so A: ");
+            A = int.Parse(Console.ReadLine());
+            Console.Write("Nhap so B: ");
+            B = int.Parse(Console.ReadLine());
+            if (A == 0)
+            {
+                Console.WriteLine("Phuong trinh Ax + B = 0 VO NGHIEM");
+            }
+            if (B == 0)
+            {
+                Console.WriteLine("Phuong trinh co VO SO NGHIEM");
+            }
+            else
+            {
+                x = 1.0 * (-B)/A;
+                Console.WriteLine($"NGHIEM la x = {x}");
+            }
+
+//========================================================================================
+// GIẢI PHƯƠNG TRÌNH BẬC 2:  Ax^2 + Bx + C  = 0 (Gia su A # 0)
+
+            int A, B, C;
+            double delta, x, x1, x2;
+
+            Console.WriteLine("Giai Phuong trinh bac 2: Ax^2 + Bx + C = 0 (Gia su A # 0)");
+            Console.Write("Nhap so A: ");
+            A = int.Parse(Console.ReadLine());
+            Console.Write("Nhap so B: ");
+            B = int.Parse(Console.ReadLine());
+            Console.Write("Nhap so C: ");
+            C = int.Parse(Console.ReadLine());
+
+            delta = B * B - 1.0 * 4 * A * C;
+
+            if (delta < 0)
+            {
+                Console.WriteLine("Phuong trinh VO NGHIEM");
+            }
+            else
+            {
+                if (delta == 0)
+                {
+                    x = -B / (2.0 * A);
+                    Console.WriteLine("Phuong trinh co NGHIEM KEP X1 = X2 = {0}", x);
+                }
+                else
+                {
+                    x1 = 1.0 * (-B + Math.Sqrt(delta)) / (2 * A);
+                    x2 = 1.0 * (-B - Math.Sqrt(delta)) / (2 * A);
+                    Console.WriteLine($"NGHIEM X1 = {x1}; NGHIEM X2 = {x2}");
+                }
+            }
+
+//========================================================================================
+// GIẢI PHƯƠNG TRÌNH BẬC 2: Ax^2 + Bx + C  = 0
+
+            int A, B, C;
+            double delta, x, x1, x2;
+
+            Console.WriteLine("Giai Phuong trinh bac 2: Ax^2 + Bx + C = 0");
+            Console.Write("Nhap so A: ");
+            A = int.Parse(Console.ReadLine());
+            Console.Write("Nhap so B: ");
+            B = int.Parse(Console.ReadLine());
+            Console.Write("Nhap so C: ");
+            C = int.Parse(Console.ReadLine());
+            if (A == 0)
+            {
+                Console.WriteLine($"Do A = 0 nen thanh PT bac nhat {B}x + {C} = 0");
+                if (B == 0)
+                {
+                    Console.WriteLine("Phuong trinh Bx + C = 0 VO NGHIEM");
+                }
+                else
+                {
+                    if (C == 0)
+                    {
+                        Console.WriteLine("Phuong trinh co VO SO NGHIEM");
+                    }
+                    else
+                    {
+                        x = 1.0 * (-C) / B;
+                        Console.WriteLine($"NGHIEM la x = {x}");
+                    }
+                }
+            }
+            else
+            {
+                delta = B * B - 1.0 * 4 * A * C;
+
+                if (delta < 0)
+                {
+                    Console.WriteLine("Phuong trinh VO NGHIEM");
+                }
+                else
+                {
+                    if (delta == 0)
+                    {
+                        x = -B / (2.0 * A);
+                        Console.WriteLine("Phuong trinh co NGHIEM KEP X1 = X2 = {0}", x);
+                    }
+                    else
+                    {
+                        x1 = 1.0 * (-B + Math.Sqrt(delta)) / (2 * A);
+                        x2 = 1.0 * (-B - Math.Sqrt(delta)) / (2 * A);
+                        Console.WriteLine($"NGHIEM X1 = {x1}; NGHIEM X2 = {x2}");
+                    }
+                }
+            }

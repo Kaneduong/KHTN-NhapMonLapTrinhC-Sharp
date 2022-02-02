@@ -1,0 +1,75 @@
+// Khai báo biến, tính tổng, chuyển đổi chuổi thành số
+
+using System;
+
+namespace NMLT1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+// Cách 1:
+            int x, y, z;
+            x = 12;
+            y = 30;
+            z = x + y;
+
+            Console.WriteLine($"Tong cua {x} va {y} la {z}");
+
+// Cách 2:
+// Tương tự như trên dùng để tính tổng 2 số nhập vào
+            int a, b, c;
+// Ở đây có thể khai báo gộp string s1, s2 thành string s trên biến 1 lần duy nhất            
+            Console.Write("Nhap so thu nhat:");
+            string s1 = Console.ReadLine();
+            a = int.Parse(s1);
+            Console.Write("Nhap so thu hai:");
+            string s2 = Console.ReadLine();
+            b = int.Parse(s2);
+            c = a + b;
+            Console.WriteLine($"Tong cua {a} va {b} la {c}");
+
+// Cách 3:
+            int a, b, c;
+            Console.Write("Nhap so thu nhat:");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("Nhap so thu hai:");
+            b = int.Parse(Console.ReadLine());
+            c = a / b;
+// Dấu / là phép chia lấy số nguyên            
+            Console.WriteLine($"Kết quả {a} / {b} la {c}");
+
+// z = x++; tương đương với gán z = x; trước, rồi tăng x = x +1;
+// z = ++x; tương đương với tăng x = x +1; trước, rồi gán z = x;
+            int x, z;
+            Console.Write("Nhap so x:");
+            x = int.Parse(Console.ReadLine());
+            z = x++;
+            Console.WriteLine($"So x nhap la {z}. Nhung do z = x++ nen no se gan z = x = {z} truoc, sau do tinh x = x + 1 tuc là x = {z} + 1 = {x}");
+
+            int a, b;
+            Console.Write("Nhap so a:");
+            a = int.Parse(Console.ReadLine());
+            b = ++a;
+            Console.WriteLine($"b = ++a nghia la no se tang a = a + 1 = {a} truoc, sau do se gan b = a = {b}");
+            
+// Toan tu += (vd: x +=3 nghia la x = x+3). Tuong tu co -= ; *= ; /= ; %=
+int x, z;
+            Console.Write("Nhap so x:");
+            x = int.Parse(Console.ReadLine());
+            z = x+=3;
+            Console.WriteLine($"Toan tu z = x+=3 nghia la z = x = x + 3 = {z}");
+            
+// Số thực, số thập phân
+            int a, b, c;
+            Console.Write("Nhap so thu nhat:");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("Nhap so thu hai:");
+            b = int.Parse(Console.ReadLine());
+            double c = 1.0 * a / b;
+            // double, fload là số thập phân, nhưng do vế trái a hoặc phải b vẫn là số nguyên nên khi chia ra vẫn là số nguyên. 
+            // Do đó ta phải nhân 1.0 vào vế trái a hoặc vế phải b để ra số thực. Khi đó chia mới được dạng số thập phân 
+            Console.WriteLine($"Kết quả {a} / {b} la {c}");
+        }
+    }
+}
