@@ -80,7 +80,7 @@ else ...
                 i++;
             }
             
-// Vd2:===========
+// BÀI 1: Tính S(n) = 1 + 2 + 3 + … + n
             int a;
             Console.Write("Tong tu 1 den so: ");
             a = int.Parse(Console.ReadLine());
@@ -93,3 +93,18 @@ else ...
                 i++;
             }
             Console.WriteLine($"Ket qua la {ketqua}");
+
+// BÀI 2: Tính S(n) = 1^2 + 2^2 + … + n^2
+            int n;
+            Console.WriteLine("Nhap so n va tinh tong den 1^2 + 2^2 + ... + n^2:");
+            n = int.Parse(Console.ReadLine());
+
+            int kq = 0;
+            int i = 1;
+
+            while (i <= n)
+            {
+                kq = kq + i * i;
+                i++;
+            }
+            Console.WriteLine($"Ket qua la: {kq}");
