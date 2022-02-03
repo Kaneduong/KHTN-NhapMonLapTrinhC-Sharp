@@ -1,0 +1,10 @@
+// MẢNG 2 CHIỀU, MA TRẬN
+/*
+Mảng 1 chiều: int[] ;
+              A = new int [10];
+              A[0] = 6
+              
+Mảng 2 chiều: int[,] A;
+              A = new int [3, 4];
+              A[0, 0] = 9; // Phần tử tại dòng 0, cột 0
+*/              
