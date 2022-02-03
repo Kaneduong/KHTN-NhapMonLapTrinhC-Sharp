@@ -1,0 +1,109 @@
+//Truyền tham trị, tham số. 
+        static void HoanVi(ref int a, int b)
+        {
+            int t = a;
+            a = b;
+            b = t;
+        }
+
+        static void Main(string[] args)
+        {
+            int x = 10;
+            int y = 20;           
+            Console.WriteLine($"{x}     {y}");
+            HoanVi(ref x, y);
+            // Truyền tham trị y sẽ không thay đổi giá trị b bên trong hàm HoanVi
+            // Truyền tham số x vào nên giá trị a trong hàm HoanVi sẽ thay đổi theo 
+            Console.WriteLine($"{x}     {y}");
+//=================================================================================
+// Tạo, gọi class xử lý riêng
+// Tạo class
+        public static int TimMin (int a, int b)
+        {
+            if (a < b)
+            {
+                return a;
+            }
+            return b;
+        }
+// Gọi 1 hàm ở class khác
+        static void Main(string[] args)
+        {
+            int x = 250;
+            int y = 43;
+            int kq = XLSoNguyen.TimMin(x,y);
+            Console.WriteLine(kq);
+        }
+//=================================================================================
+// Mảng 1 chiều
+// Nếu namespace giống nhau thì không dùng using, Khác nhau thì bên main gõ using <namespacekhac>
+// CÁCH 1: Chỉ viết trong hàm main
+            int[] A;
+            //Nhập mảng
+            Console.WriteLine("Nhap so luong phan tu mang:");
+            int N = int.Parse(Console.ReadLine());
+            A = new int[N]; //Xác định mảng A có N phần tử
+            for (int i = 0; i < A.Length; i++)
+            {
+                Console.Write($"Nhap phan tu A[{i}]:");
+                A[i] = int.Parse(Console.ReadLine());
+            }
+            //Tính tổng các phần tử trong mảng
+            int S = 0;
+            for (int i = 0; i < A.Length; i++)
+            {
+                S = S + A[i];
+            }
+            //Xuất mảng đã nhập
+            for(int i = 0; i < A.Length; i++)
+            {
+                Console.Write($"{A[i]}     ");
+            }
+            //Kết quả tính mảng
+            Console.WriteLine($"Tong la: {S}");
+            
+//CÁCH 2: Chia theo class        
+// Bước 1: Tạo class Mảng
+// Bước 2: Tạo hàm trong class Mảng
+//==========
+        public static int[] NhapMang(string GhiChu)
+        {
+            int[] A;
+            //Nhập mảng
+            Console.WriteLine("Nhap so luong phan tu mang:");
+            int N = int.Parse(Console.ReadLine());
+            A = new int[N]; //Xác định mảng A có N phần tử
+            for (int i = 0; i < A.Length; i++)
+            {
+                Console.Write($"Nhap phan tu A[{i}]:");
+                A[i] = int.Parse(Console.ReadLine());
+            }
+        }
+//==========        
+         public static int TongMang(int[] A)
+        {
+            int S = 0;
+            for (int i = 0; i < A.Length; i++)
+            {
+                S = S + A[i];
+            }
+            return S;
+        }
+//==========        
+         public static void XuatMang(int[] A)
+        {
+            for(int i = 0; i < A.Length; i++)
+            {
+                Console.Write($"{A[i]}     ");
+            }
+        }
+// Bước 3: Gọi hàm trong class Mảng chạy trong Main
+        static void Main(string[] args)
+        {
+            int[] A;
+            A = Mang1Chieu.NhapMang("Mang A");            
+            int S = Mang1Chieu.TongMang(A);
+            Console.WriteLine($"Tong la: {S}");
+        }
+        
+//=================================================================================
